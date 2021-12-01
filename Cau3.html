@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiTuNguyenAm(str) {
+        let kiTuNguyenAm = ["u", "e", "o", "a", "i"];
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < kiTuNguyenAm.length; j++) {
+                if (str[i].toLowerCase() === kiTuNguyenAm[j]) {
+                    count++;
+                }
+            }
+        }
+        if (count === 0) {
+            return false;
+        } else {
+            return count;
+        }
+    }
+
+
+    let str1 = "HelloWorld"
+    alert("Dãy có tổng cộng " + kiTuNguyenAm(str1) + " ký tự nguyên âm");
+</script>
+</body>
+</html>
